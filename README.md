@@ -3,6 +3,8 @@
 <img src="https://i.ibb.co/r7xBVvT/script.png" alt="script.png" />
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) ![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square) ![Maintenance](https://img.shields.io/maintenance/yes/2021) 
+  
+![GitHub forks](https://img.shields.io/github/forks/Algo-Phantoms/Algo-ScriptML?style=social) ![GitHub Repo stars](https://img.shields.io/github/stars/Algo-Phantoms/Algo-ScriptML?style=social) 
 
 Python implementations of some of the fundamental Machine Learning models and algorithms from scratch.
 
@@ -35,9 +37,10 @@ The goal of this project is not to create algorithms that are as streamlined and
 * [XGBoost](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/XGBoost)
 
 ## Contribution Guidelines ⚙️
-You may go through these guidelines and contribute accordingly:
 
-* Make sure you do not copy codes from external sources like GFG, etc because that work will not be considered. Plagiarism is strictly not allowed.
+**Please go through the whole Contributing Guidelines [here](https://github.com/Algo-Phantoms/Algo-ScriptML/blob/main/Contributing_Guidelines.md).**
+
+* Make sure you do not copy codes from external sources because that work will not be considered. Plagiarism is strictly not allowed.
 * You can only work on issues that you have been assigned to you.
 * If you want to contribute for an existing algorithm, we prefer that you create an issue before making a PR and link your PR to that issue.
 * If you have modified/added code work, make sure the code compiles before submitting.
@@ -46,7 +49,7 @@ You may go through these guidelines and contribute accordingly:
 
 ## Where to upload the files 📂
 
-* Your files should be uploaded inside the *code folder into the corresponding language folder (For instance, if you wrote code for an Algorithm Implementation in Java, it goes inside the code/Java folder).
+* Your files should be uploaded inside the *code folder into the corresponding language folder (For instance, if you wrote code for an K-Means Implementation, it goes inside the K-Means folder).
 * **Under no circumstances create new folders within the language folders to upload your code unless specifically told to do so.**
 * Edit the corresponding README.md file to add the link to your code in the corresponding section ([GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/))
 
@@ -56,11 +59,19 @@ The value of a strong contribution stays beyond everything and gives you satisfa
 
 ## Code Of Conduct:
 
-You can find our Code of [Conduct here](https://github.com/Algo-Phantoms/Algo-ScriptML/blob/main/CODE_OF_CONDUCT.md).
+You can find our Code of Conduct [here](https://github.com/Algo-Phantoms/Algo-ScriptML/blob/main/CODE_OF_CONDUCT.md).
 
-## License: 
+## License 📝 
 
 This project follows the [MIT License](https://choosealicense.com/licenses/mit/).
+
+## Minatainers 😇
+
+<table>
+  <tbody><tr>
+    <td align="center"><a href="https://github.com/geekquad"><img alt="" src="https://avatars.githubusercontent.com/geekquad" width="100px;"><br><sub><b>Aditya Kumar Gupta</b></sub></a><br><a href="https://github.com/geekquad/AlgoBook/commits?author=geekquad" title="Code">💻 🖋</a></td> </a></td>
+  </tr>
+</tbody></table>
 
 
 
