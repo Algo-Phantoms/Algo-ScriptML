@@ -11,28 +11,28 @@ The goal of this project is not to create algorithms that are as streamlined and
 
 ## Algorithms:
 
-* Adaboost
-* Apriori
-* Bayesian Regression
-* DBSCAN
-* Decision Tree
-* Elastic Net
-* FP-Growth
-* Gaussian Mixture Model
-* Genetic Algorithm
-* K Nearest Neighbors
-* K-Means
-* Lasso Regression
-* Linear Regression
-* Logistic Regression
-* Multilayer Perceptron
-* Naive Bayes
-* Perceptron
-* Principal Component Analysis
-* Random Forest
-* Ridge Regression
-* Support Vector Machine
-* XGBoost
+* [Adaboost](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Adaboost)
+* [Apriori](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Apriori)
+* [Bayesian Regression](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Bayesian%20Regression)
+* [DBSCAN](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/DBSCAN)
+* [Decision Tree](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Decision%20Tree)
+* [Elastic Net](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Elastic%20Net)
+* [FP-Growth](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/FP-Growth)
+* [Gaussian Mixture Model](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Gaussian%20Mixture%20Model)
+* [Genetic Algorithm](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Genetic%20Algorithm)
+* [K Nearest Neighbors](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/K%20Nearest%20Neighbors)
+* [K-Means](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/K-Means)
+* [Lasso Regression](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Lasso%20Regression)
+* [Linear Regression](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Linear%20Regression)
+* [Logistic Regression](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Logistic%20Regression)
+* [Multilayer Perceptron](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Multilayer%20Perceptron)
+* [Naive Bayes](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Naive%20Bayes)
+* [Perceptron](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Perceptron)
+* [Principal Component Analysis](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Principal%20Component%20Analaysis)
+* [Random Forest](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Random%20Forest)
+* [Ridge Regression](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Ridge%20Regression)
+* [Support Vector Machine](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/Support%20Vector%20Machine)
+* [XGBoost](https://github.com/Algo-Phantoms/Algo-ScriptML/tree/main/XGBoost)
 
 ## Contribution Guidelines ⚙️
 You may go through these guidelines and contribute accordingly:
@@ -42,12 +42,22 @@ You may go through these guidelines and contribute accordingly:
 * If you want to contribute for an existing algorithm, we prefer that you create an issue before making a PR and link your PR to that issue.
 * If you have modified/added code work, make sure the code compiles before submitting.
 * Strictly use snake_case (underscore_separated) in your file_name and push it in correct folder.
-* Do not update the README.md.
+* Do not update the **[README.md](https://github.com/Algo-Phantoms/Algo-ScriptML/blob/main/README.md).**
 
 ## Where to upload the files 📂
 
 * Your files should be uploaded inside the *code folder into the corresponding language folder (For instance, if you wrote code for an Algorithm Implementation in Java, it goes inside the code/Java folder).
 * **Under no circumstances create new folders within the language folders to upload your code unless specifically told to do so.**
-* Edit the corresponding README.md file to add the link to your code in the corresponding section (GitHub Markdown Guide).
+* Edit the corresponding README.md file to add the link to your code in the corresponding section ([GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/))
 
-> The value of a strong contribution stays beyond everything and gives you satisfaction 👍🌟
+```
+The value of a strong contribution stays beyond everything and gives you satisfaction 👍🌟
+```
+
+## Code Of Conduct:
+
+You can find our Code of [Conduct here](https://github.com/Algo-Phantoms/Algo-ScriptML/blob/main/CODE_OF_CONDUCT.md).
+
+## License: 
+
+This project follows the [MIT License](https://choosealicense.com/licenses/mit/).
