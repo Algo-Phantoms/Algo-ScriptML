@@ -65,7 +65,7 @@ You can find our Code of Conduct [here](https://github.com/Algo-Phantoms/Algo-Sc
 
 This project follows the [MIT License](https://choosealicense.com/licenses/mit/).
 
-## Minatainers 😇
+## Maintainers 😇
 
 <table>
   <tbody><tr>
