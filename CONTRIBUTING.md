@@ -28,7 +28,7 @@ We want your work to be readable by others; therefore, we encourage you to note 
 - Please avoid creating new directories if at all possible. Try to fit your work into the existing directory structure. If you want to. Please contact us before doing so.
 - If you have modified/added code work, make sure the code compiles before submitting.
 - If you have modified/added documentation work, ensure your language is concise and contains no grammar errors.
-- Do not update the [README.md](https://github.com/Algo-Phantoms/Algo-ScriptML/blob/main/README.md) and [Contributing_Guidelines.md](https://github.com/Algo-Phantoms/Algo-ScriptML/blob/main/Contributing_Guidelines.md).
+- Do not update the [README.md](https://github.com/Algo-Phantoms/Algo-ScriptML/blob/main/README.md) and [Contributing_Guidelines.md](https://github.com/Algo-Phantoms/Algo-ScriptML/blob/main/CONTRIBUTING.md).
 
 Happy Coding :)
 
