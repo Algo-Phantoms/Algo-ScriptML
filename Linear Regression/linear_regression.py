@@ -5,7 +5,6 @@ class LinearRegression():
     def __init__(self, X, y, learning_rate=0.03, n_iterations=1500):
         """Parameters:
 
-        -----------
         n_iterations: float
             The number of training iterations the algorithm will tune the weights for.
         learning_rate: float
