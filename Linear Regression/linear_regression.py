@@ -1,5 +1,4 @@
 import numpy as np
-
 class LinearRegression():
     """ This is an implementation of a Linear Regression Algorithm."""
     def __init__(self, X, y, learning_rate=0.03, n_iterations=1500):
@@ -10,6 +9,7 @@ class LinearRegression():
         learning_rate: float
             The step length that will be used when updating the weights.
         """
+        
         self.learning_rate = learning_rate
         self.n_iterations = n_iterations
         self.n_samples = len(y)
