@@ -1,7 +1,7 @@
 import numpy as np
 class LinearRegression():
+    
     def __init__(self, X, y, learning_rate=0.03, n_iterations=1500):
-        
         """This is an implementation of a Linear Regression Algorithm.
         Parameters:
 
