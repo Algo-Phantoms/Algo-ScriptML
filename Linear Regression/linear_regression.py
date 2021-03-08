@@ -2,9 +2,7 @@ import numpy as np
 
 class LinearRegression():
 
-    """
-    This is an implementation of a Linear Regression Algorithm.
-    """
+    """ This is an implementation of a Linear Regression Algorithm."""
 
     def __init__(self, X, y, learning_rate=0.03, n_iterations=1500):
         """
