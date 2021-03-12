@@ -58,6 +58,7 @@ class LinearRegression:
         n, m = X.shape
         w, b = self.initialize(m)
         w = w
+        b = b
         self.w, self.b = self.initialize(m)
         for _ in range(epochs):
             y_pred = self.forward(X, self.w, self.b)
