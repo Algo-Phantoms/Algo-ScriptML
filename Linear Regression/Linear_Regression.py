@@ -57,8 +57,9 @@ class LinearRegression:
         y  = np.reshape(np.array(y), (len(y), 1))
         n, m = X.shape
         w, b = self.initialize(m)
+        w = w
         self.w, self.b = self.initialize(m)
-        for i in range(epochs):
+        for _ in range(epochs):
             y_pred = self.forward(X, self.w, self.b)
             cost = self.compute_cost(y_pred, y, n)
             dw, db = self.backward(y_pred, y, X, n)
