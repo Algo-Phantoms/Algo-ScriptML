@@ -36,4 +36,4 @@ The output can be represented as “1” or “0.”  It can also be represented
 
 - <p> <h3> Perceptron Training <h3> 
 Refer:
-[Perceptron Training](Perceptron_Training.ipynb)
+[Perceptron Training](perceptron_training.py)
