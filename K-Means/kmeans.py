@@ -3,7 +3,6 @@ import random
 from sklearn.cluster import KMeans
 import seaborn as sns
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.datasets import make_blobs
 
@@ -41,6 +40,7 @@ sns.scatterplot(X[:, 0], X[:, 1])
 class Cluster:
 
     def __init__(self, center):
+        """Initialization of Clusters for K Means."""
         self.center = center
         self.points = []
 
@@ -51,17 +51,18 @@ class Cluster:
 class CustomKMeans:
 
     def __init__(self, n_clusters=3, max_iters=20):
+        """Custom Implementation of K Means."""
         self.n_clusters = n_clusters
         self.max_iters = max_iters
 
     def fit(self, X):
 
         clusters = []
-        for i in range(self.n_clusters):
+        for _ in range(self.n_clusters):
             cluster = Cluster(center=random.choice(X))
             clusters.append(cluster)
 
-        for i in range(self.max_iters):
+        for _ in range(self.max_iters):
 
             labels = []
 
