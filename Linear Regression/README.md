@@ -1,4 +1,4 @@
-Regression:
+ ## Regression:
 
 Firstly let’s see what's regression.  Regression is a technique for predicting a goal value using independent predictors. This method is primarily used for forecasting and determining cause and effect relationships among variables. The number of independent variables and the form of relationship between the independent and dependent variables is the key points that cause the differences in regression techniques.
 
