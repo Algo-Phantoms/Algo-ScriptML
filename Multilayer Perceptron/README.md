@@ -18,8 +18,7 @@
 \
 \
 ![plot](./multi_layer_perceptron2.jpg)
-\
-\
+
 ## References 
 ### Reading References
 - http://ml.informatik.uni-freiburg.de/former/_media/teaching/ss10/05_mlps.printer.pdf
