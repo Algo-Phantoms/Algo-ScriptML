@@ -84,10 +84,15 @@ The basic procedure for implementing Bayesian Linear Modellling includes:
 The end result will be posterior distribution for the parameters.
 ## When we want show the linear fit from a Bayesian model, instead of showing only estimate, we can draw a range of lines, with each one representing a different estimate of the model parameters. As the number of datapoints increases, the lines begin to overlap because there is less uncertainty in the model parameters.
 ![1_8bA09THSC_Cy5LeijM8oEA](https://user-images.githubusercontent.com/70088281/111058347-02bf4000-84b4-11eb-94d4-1f008040f470.png) 
+
 ![1_C8eR-V648On7Nb11eMqWlg](https://user-images.githubusercontent.com/70088281/111058375-369a6580-84b4-11eb-8913-202339fe03d8.png)
-##When using less data points, the fits have a lot of variance, which means that the model is more unpredictable. Since the priors are washed out by the likelihoods from the data, the OLS and Bayesian Fits are virtually similar with all of the data points.
-##When predicting the output for a single datapoint using our Bayesian Linear Model, we also do not get a single value but a distribution.
+
+When using less data points, the fits have a lot of variance, which means that the model is more unpredictable. Since the priors are washed out by the likelihoods from the data, the OLS and Bayesian Fits are virtually similar with all of the data points.<br />
+
+When predicting the output for a single datapoint using our Bayesian Linear Model, we also do not get a single value but a distribution.
+
 ![1_vKbWqDqfz_crZ1C2Ew9dxA](https://user-images.githubusercontent.com/70088281/111058448-b9bbbb80-84b4-11eb-9d9c-c39495874b6d.png)
+
 ## probability density plot for the number of calories burned exercising for 15.5 minutes. The red vertical line indicates the point estimate from OLS.
 ## The chance of burning a certain amount of calories ranges at about 89.3, although the full approximation is a variety of potential values.
 ## The Bayesian Linear Regression framework will integrate prior data while still showing our uncertainty. The Bayesian method is reflected in Bayesian Linear Regression: we construct an initial approximation and refine it as more evidence is gathered. The Bayesian perspective is a natural way of seeing the universe.The inference(bayesian) is a much better alternative to its frequentist counterpart.
