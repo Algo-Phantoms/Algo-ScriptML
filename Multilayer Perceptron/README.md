@@ -18,3 +18,16 @@
 \
 \
 ![plot](./multi_layer_perceptron2.jpg)
+\
+\
+## References 
+### Reading References
+- http://ml.informatik.uni-freiburg.de/former/_media/teaching/ss10/05_mlps.printer.pdf
+- http://www.sfu.ca/iat813/lectures/lecture8.html
+- http://www.cnel.ufl.edu/courses/EEL6814/chapter3.pdf
+- https://machinelearningmastery.com/neural-networks-crash-course/
+### Video References
+- https://www.youtube.com/watch?v=u5GAVdLQyIg&ab_channel=TheCodingTrain
+- https://www.youtube.com/watch?v=MxVXIeOj-EY&ab_channel=KindsonTheGenius
+- https://www.youtube.com/watch?v=pbQtQ2Bdzf8&ab_channel=PowerH
+- https://www.youtube.com/watch?v=xQ0RwgyejVc&ab_channel=GreatLearning
