@@ -5,6 +5,7 @@ Firstly let’s see what's regression.  Regression is a technique for predicting
 Linear regression
 
 One of the most fundamental and commonly used Machine Learning algorithms is linear regression. It's a statistical methodology for conducting the predictive analysis. The linear regression algorithm shows a linear relationship between a dependent (y) variable and one or more independent (y) variables, hence the name. Since linear regression reveals a linear relationship, it determines how the value of the dependent variable changes as the value of the independent variable changes.
+
 ![](https://static.javatpoint.com/tutorial/machine-learning/images/linear-regression-in-machine-learning.png)
 
 Linear regression is mathematically represented as:-
@@ -40,6 +41,7 @@ Gradient Descent:
 
 Gradient descent is a method of reducing the cost function by modifying a0 and a1 (MSE). The idea is that we start with some a0 and a1 values and then reduce the cost by adjusting them iteratively. Gradient descent assists us in changing the values. The gradient always points in the direction of the steepest loss function rise. In order to minimize loss as quickly as possible, the gradient descent algorithm takes a step in the direction of the negative gradient. The learning rate in the gradient descent algorithm is the number of steps you take. This dictates how easily the algorithm reaches the minima.
 A smaller learning rate will get you closer to the minima, but it will take longer to achieve it; a larger learning rate converges faster, but there is a risk of overshooting the minima.
+
 ![](https://miro.medium.com/max/470/1*D4Q7zeRBmZ3z1CbD37CIhg.png)
 
 The partial derivates are the gradient descent and are used to update the value of a0 and a1
