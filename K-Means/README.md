@@ -12,10 +12,11 @@ K-means clustering aims to partition n observations into k clusters in which eac
 
 ## How K-Means Algorithm Works?
 
-The algorithm starts with an inital set of cluster Centroids chosen at random or according to some heuristic procedure. In each iteration, each data point is assigned to its nearest cluster Centroid. Nearness is measured using the Euclidean distance measure. Then the cluster Centroids are re-computed. The Centroid of each cluster is calculated as the mean value of all the data points that are assigned to that cluster. 
-
-Several termination conditions are possible. For example, the search may stop when the error that 
-is computed at every iteration does not reduce because of reassignment of the Centroids. This indicates that the present partition is locally optimal. Other stopping criteria can be used also such as stopping the algorithms after a pre-defined number of iterations.
+1. The algorithm starts with an inital set of cluster Centroids chosen at random or according to some heuristic procedure.
+2. Then in each iteration, each data point is assigned to its nearest cluster Centroid. Nearness is measured using the Euclidean distance measure. 
+3. The cluster Centroids are re-computed. The Centroid of each cluster is calculated as the mean value of all the data points that are assigned to that cluster. 
+4. For the algorithm to terminate several conditions are possible.
+5. For example, the search may stop when the error that  is computed at every iteration does not reduce because of reassignment of the Centroids. This indicates that the present partition is locally optimal. Other stopping criteria can be used also such as stopping the algorithms after a pre-defined number of iterations.
 
 **Steps for implementation**
 
@@ -34,4 +35,8 @@ is computed at every iteration does not reduce because of reassignment of the Ce
 5. It also requires the number of clusters in advance, which is not trival when no prior knowledge is available.
 
 ## Reference
-Big Data Analytics - By Radha Shankarmani and M. Vijayalakshmi
+- Big Data Analytics - By Radha Shankarmani and M. Vijayalakshmi
+- [K-Means - Standford CSS21](https://stanford.edu/~cpiech/cs221/handouts/kmeans.html)
+- [K-Means Clustering - Towards Data Science (Theory)](https://towardsdatascience.com/k-means-clustering-explained-4528df86a120)
+- [Understanding K-Means Clustering in Machine Learning - Towards Data Science (Theory)](https://towardsdatascience.com/understanding-k-means-clustering-in-machine-learning-6a6e67336aa1)
+- [K-Means Clustering Algorithm - Simplilearn (Video)](https://www.youtube.com/watch?v=Xvwt7y2jf5E&t=10s)
