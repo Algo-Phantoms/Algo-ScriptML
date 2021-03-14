@@ -2,7 +2,7 @@
  In the normal(frequentist) Linear regression we generally estimate model parameters ( &#x3B8;) by means of maximum likelihood or MAP estimation.Since MLE can lead to severe overfitting,in particular,to small data regime.MAP does not give a good representation of our uncertainities. Bayesian Linear regression pushes the idea of the parameter prior a step further and does not even attempt to compute a point estimte of the parameters but instead the full posterior distirbution is taken into account when making predictions.
  P( &#x3B8;/y,x)=(P(y/ &#x3B8;,x)*P( &#x3B8;/x))/p(y/x)
  here P( &#x3B8;/y,x) is the posterior probability distribution  of the model parameters given the input and the output
-# Posterior =(Likelihood*Prior)/Normaliztion
+# Posterior =(Likelihood*Prior)/Normalization
 
 # Priors
  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
