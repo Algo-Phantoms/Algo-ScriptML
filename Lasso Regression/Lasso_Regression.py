@@ -32,8 +32,9 @@ class LassoRegression() :
         # calculating gradient descent epooch time
                 
         for i in range( self.epoch ) : 
-            self.updating_weights() 
+            self.updating_weights()
             
+        return self
         
     def updating_weights( self ) :
         '''
