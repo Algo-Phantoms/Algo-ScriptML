@@ -1,3 +1,4 @@
+import numpy as np
 class RandomForest():
     def __init__(self, x, y, n_trees, n_features, sample_sz, depth=10, min_leaf=5):
         np.random.seed(12)
