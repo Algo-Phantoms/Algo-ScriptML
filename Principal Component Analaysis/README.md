@@ -33,56 +33,6 @@ Z² = Φ¹²X¹ + Φ²²X² + Φ³²X³ + .... + Φp2Xp
 
 If the two components are uncorrelated, their directions should be orthogonal.
 
-# Normalization of variables is necessary in PCA.
-
-**Reason**: 
-
-The principal components are supplied with normalized version of original predictors. This is because, the original predictors may have different scales. For example: Imagine a data set with variables’ measuring units as gallons, kilometers, light years etc. It is definite that the scale of variances in these variables will be large.
-
-Performing PCA on un-normalized variables will lead to insanely large loadings for variables with high variance. In turn, this will lead to dependence of a principal component on the variable with high variance. This is undesirable.
-
-**Now let's understand this concept with help of example dataset using Scikit-learn and find out the components with maximum variance.**
-
-# Step-1: 
-* Import the required libraries
-* REad the dataset.
-
-# Step-2:
-* Do the necessary data exploration part if required.
-
-# Step-3:
-* Then head towrds **Data Standardization** .
-* **Standardization** refers to shifting the distribution of each attribute to have a mean of zero and a standard deviation of one (unit variance). It is useful to standardize attributes for a model. Standardization of datasets is a common requirement for many machine learning estimators implemented in scikit-learn; they might behave badly if the individual features do not more or less look like standard normally distributed data
-
-# Step-4:
-* Seperate the features from the labels
-* Then using **StandardScaler** module of sklearn library, fit the seperated features.
-
-# Step-5:
-* Compute the important**Eigenvalue and EigenVectors**
-* followed by covariance metarix.
-
-# Step-6:
-* **Select the principal components**. But before this...
-* In order to decide which eigenvector(s) can dropped without losing too much information for the construction of lower-dimensional subspace, we need to inspect the corresponding eigenvalues: The eigenvectors with the lowest eigenvalues bear the least information about the distribution of the data; those are the ones can be dropped.
-    * Make a list of (eigenvalue, eigenvector) tuples
-    * Sort the (eigenvalue, eigenvector) tuples from high to low
-    * Visually confirm that the list is correctly sorted by decreasing eigenvalues
-
-# Step-7:
-* **Explained Variance** After sorting the eigenpairs, the next question is "how many principal components are we going to choose for our new feature subspace?" A useful measure is the so-called "explained variance," which can be calculated from the eigenvalues. The explained variance tells us how much information (variance) can be attributed to each of the principal components.
-* And plot it to see the result.
-
-# Step-8:
-* Calculate the **Projection Matrix**
-* The construction of the projection matrix that will be used to transform the analytics data onto the new feature subspace.
-* **Projection Onto the New Feature Space** In this last step we will use the 7×2-dimensional projection matrix W to transform our samples onto the new subspace via the equation **Y=X×W**
-
-# Step-9:
-* **PCA** in Scikit-Learn.
-* Use the PCA module from **sklearn.decomposition**
-* And fit the model and plot it to see the component analysis.
-
 # Conclusion:
 
 Thus **Principal Component Analysis** is used to remove the redundant features from the datasets without losing much information.
