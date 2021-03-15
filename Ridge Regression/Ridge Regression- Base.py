@@ -31,14 +31,14 @@ class Ridge_Regression():  #defining a class named Ridge Regression
         
         for _ in range(self.iteration):
            
-            Yp =np.dot(x,self.w) + b.self  #calculating the predicted values  
+            yi = np.dot(x,self.w) + b.self  #calculating the predicted values  
             
             residuals =  self.y-yi    #calculating the residuals
             
             #calculating gradients
             
             
-            gradient_w = (-2*np.dot(x.T,residuals)) + 2 * self.w * self.lam /self.m 
+            gradient_w = (-2*np.dot(x.T,residuals) + 2 * self.w * self.lam)/self.m 
             
             gradient_b = - 2 * np.sum( residuals ) / self.m 
             
