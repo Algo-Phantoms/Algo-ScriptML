@@ -45,3 +45,6 @@ A smaller learning rate will get you closer to the minima, but it will take long
 ![](https://miro.medium.com/max/470/1*D4Q7zeRBmZ3z1CbD37CIhg.png)
 
 The partial derivates are the gradient descent and are used to update the value of a0 and a1
+
+For more clear perspective you can also go through the following video:
+https://www.youtube.com/watch?v=E5RjzSK0fvY
