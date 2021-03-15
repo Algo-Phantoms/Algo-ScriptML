@@ -71,7 +71,33 @@ This has an analogy in which we need to imagine ourselves at the top of a mounta
 
 ![Image12](https://github.com/sakshi012000/Logistic-regression-/blob/master/image12.png?raw=true)
 
+## Advantages
+- Logistic regression is easier to implement, interpret, and very efficient to train.
+- It makes no assumptions about distributions of classes in feature space.
+- It is very fast at classifying unknown records.
+- Good accuracy for many simple data sets and it performs well when the dataset is linearly separable.
+
+## Disadvantages
+- If the number of observations is lesser than the number of features, Logistic Regression should not be used, otherwise, it may lead to overfitting.
+- It constructs linear boundaries.
+- Non-linear problems can’t be solved with logistic regression because it has a linear decision surface. Linearly separable data is rarely found in real-world scenarios.
+- The major limitation of Logistic Regression is the assumption of linearity between the dependent variable and the independent variables.
+
+## Applications
+- Credit scoring
+- Medicine
+- Text editing
+- Hotel Booking
+- Gaming
+
 ## Conclusion
 This is a basic idea of what Logistic Regression is in Machine Learning.
 
 Thanks for Reading.
+
+## Refrences
+- https://machinelearningmastery.com/logistic-regression-for-machine-learning/
+- https://www.geeksforgeeks.org/understanding-logistic-regression/
+- https://www.analyticsvidhya.com/blog/2020/10/introduction-to-logistic-regression-the-most-common-classification-algorithm/
+- https://www.youtube.com/watch?v=VCJdg7YBbAQ
+- https://activewizards.com/blog/5-real-world-examples-of-logistic-regression-application
