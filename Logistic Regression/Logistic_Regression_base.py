@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-#normalizing the features (using mean and standard deviation)
+#normalizing the features
 def normalize_features(X):
     for i in range(1,X.shape[1]+1):
         mean = np.mean(X[:,i-1])
