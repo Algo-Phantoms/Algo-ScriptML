@@ -8,7 +8,7 @@
 
 **theta** - row vector contaning weights
 
-**alpha** - variable for denoting the learning rate
+**alpha** - learning rate
 
 **num_itr** - number of iterations
 
