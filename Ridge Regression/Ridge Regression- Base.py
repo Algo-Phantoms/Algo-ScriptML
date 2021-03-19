@@ -29,7 +29,7 @@ class Ridge_Regression():  #defining a class named Ridge Regression
         self.x = x
         self.y = y
         
-        for _ in range(self.iteration):
+        for i in range(self.iteration):
            
             yi = np.dot(x,self.w) + b.self  #calculating the predicted values  
             
