@@ -21,11 +21,11 @@
 
 ## SGD function:
 
-![iterative algorithm function](https://images.app.goo.gl/JTGMHYS5tYBdVwn78)
+![](https://github.com/captainra1/images/blob/master/fn.png)
 
 ## Difference between SGD and Gradient descent(Batch descent):
 
-![difference between SGD and GD](https://images.app.goo.gl/xGEBByLdMAYzXDzW9)
+![](https://github.com/captainra1/images/blob/master/diff.png)
  * gradient descent goes from 1 to m(no of datasets) in every iterations while SGD iterates one time over one dataset.
 
  ## Main advantages of SGD:
