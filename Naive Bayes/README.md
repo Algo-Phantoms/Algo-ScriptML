@@ -33,7 +33,7 @@ Naive Bayes is a poweful classification algorithim which is based on Bayes's The
 
 ## References
 
-https://web.stanford.edu/~jurafsky/slp3/4.pdf
-https://web.stanford.edu/class/archive/cs/cs109/cs109.1176/lectures/22-NaiveBayes.pdf
-https://www.youtube.com/watch?v=nt63k3bfXS0
-https://www.youtube.com/watch?v=IVKF_wmIdiI
+- https://web.stanford.edu/~jurafsky/slp3/4.pdf
+- https://web.stanford.edu/class/archive/cs/cs109/cs109.1176/lectures/22-NaiveBayes.pdf
+- https://www.youtube.com/watch?v=nt63k3bfXS0
+- https://www.youtube.com/watch?v=IVKF_wmIdiI
