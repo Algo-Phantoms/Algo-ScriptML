@@ -1,3 +1,4 @@
+import numpy as np
 class SVM:
 
     def __init__(self, alpha=0.001, lambda1=0.01, epochs=1000):
