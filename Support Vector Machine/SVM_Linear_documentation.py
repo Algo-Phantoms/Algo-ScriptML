@@ -49,9 +49,9 @@ def model_accuracy(y_test, pred):
 
 def initialization():
     #initializing data and performing eda to consider only useful features
-    X_train = pd.read_csv('/home/ptnv-s/Downloads/MRM_RESEARCH_AI_WEEK3-main/train.csv')
-    X_test = pd.read_csv('/home/ptnv-s/Downloads/MRM_RESEARCH_AI_WEEK3-main/test.csv')
-    test_data = '/home/ptnv-s/Downloads/MRM_RESEARCH_AI_WEEK3-main/gender_submission.csv'
+    X_train = pd.read_csv('train.csv')
+    X_test = pd.read_csv('test.csv')
+    test_data = 'gender_submission.csv'
     y_test = pd.read_csv(test_data)
     y_test = y_test[['Survived']].copy()
     y_test = y_test.values
