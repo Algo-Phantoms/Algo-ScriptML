@@ -109,27 +109,10 @@ print("Accuracy of the AdaBoost-Classifier Model (algorithm from scratch):",accu
 
 """**TEST ALGORITHM**"""
 
-from sklearn.ensemble import AdaBoostClassifier
+# from sklearn.ensemble import AdaBoostClassifier
 
-classification_check=AdaBoostClassifier(n_estimators=5, algorithm="SAMME")
-classification_check.fit(x,y)
-y_pred_classification_check=classification_check.predict(x)
+# classification_check=AdaBoostClassifier(n_estimators=5, algorithm="SAMME")
+# classification_check.fit(x,y)
+# y_pred_classification_check=classification_check.predict(x)
 
-print("Accuracy Check of the AdaBoost-Classifier Model (sklearn implementation):",accuracy_score(y, y_pred_classification_check))
-
-"""Our Adaboost algorithm gives the exact same result as the sklearn implementation, so our algorithm is right!!
-
-**ADVANTAGES OF ADABOOST**
-
-AdaBoost is easy to implement. It iteratively corrects the mistakes of the weak classifier & improves accuracy by combining weak learners. AdaBoost is not prone to overfitting. We can use many base classifiers with AdaBoost like Decision Tree, SVC and many more.
-
-**DISADVANTAGES OF ADABOOST**
-
-The great disadvantage of this algorithm is that the model cannot be parallelized since each predictor can only be trained after the previous one has been trained and evaluated.
-
-AdaBoost is sensitive to noise data. AdaBoost is slower compared to other boosting algorithms like XGBoost. As it tries to fit each point perfectly, it is highly affected by outliers.
-
-**REFERENCES**
-
-https://python.plainenglish.io/adaboost-classifier-in-python-8d34a9f20459
-"""
+# print("Accuracy Check of the AdaBoost-Classifier Model (sklearn implementation):",accuracy_score(y, y_pred_classification_check))
