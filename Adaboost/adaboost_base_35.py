@@ -12,16 +12,6 @@ Adaboost combines multiple weak classifiers to increase the accuracy of classifi
 The AdaBoost classifier builds a strong classifier by combining multiple weakly performing classifiers to get high accuracy strong classifier for our problem.
 The basic concept behind Adaboost is to set the classifier weights of classifiers and train the data sample in each iteration to ensure accurate predictions/results of the unusual observations. Any machine learning which accepts weights on the training set can be used as a base classifier.
 
-Two conditions should be met for AdaBoost:
-
-> The classifier should be interactively trained on various weighted training examples.
-
-
-> In each iteration, it tries to provide a good fit for these examples by minimizing training error.
-
-To build an AdaBoost classifier, imagine that we train a Decision Tree algorithm to make predictions on our training data as a first base classifier. 
-
-Now, following AdaBoost's methodology, the weight of the misclassified training instances is increased. Then The second classifier is trained & acknowledges the updated weights, and it repeats the procedure repeatedly. At the end of each model-prediction, we boost the weights of the misclassified instances so that the next model under training does a better job. AdaBoost adds predictors to the ensemble and gradually makes it better.
 
 # **Intuition of AdaBoost Algorithm**
 
