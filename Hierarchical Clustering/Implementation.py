@@ -1,11 +1,3 @@
-# Mall Customer Segmentation: <font color='blue'>K-Means Clustering</font>
-* Importing the libraries
-* Importing the dataset
-* Dataset information (Pandas Profiling)
-* Elbow method to find the optimal number of clusters
-* Training the K-Means model on the dataset
-* Visualising the clusters
-
 ## Importing the libraries
 """
 
