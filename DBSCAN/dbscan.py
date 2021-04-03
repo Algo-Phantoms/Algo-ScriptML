@@ -18,7 +18,7 @@ def show_cluster(x,cluster):
     df=DataFrame(dict(x=x[:,0],y=x[:,1],label=cluster))
     colors={-1:'red',0:'blue',1:'orange',2:'skyblue'}
     grouped=df.groupby('label')
-    fig,ax=plt.subplots(figsize=(8,8))
+    fig,ax=plt.subplots(figsize=(8,5))
     for key,group in grouped:
         group.plot(ax=ax,kind='scatter',x='x',y='y',label=key,color=colors[key])
     plt.show()
