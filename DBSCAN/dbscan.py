@@ -1,71 +1,76 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Mar 15 13:37:47 2021
+#importing libraries
 
-@author: Lenovo
-"""
-import numpy as np
-from sklearn.cluster import DBSCAN
-from sklearn import metrics
 from sklearn.datasets import make_blobs
-from sklearn.preprocessing import StandardScaler
-
-# Generate sample data
-centers = [[1, 1], [-1, -1], [1, -1]]
-X, labels_true = make_blobs(n_samples=750, centers=centers, cluster_std=0.4,
-                            random_state=0)
-
-X = StandardScaler().fit_transform(X)
-
-# Compute DBSCAN
-db = DBSCAN(eps=0.3, min_samples=10).fit(X)
-core_samples_mask = np.zeros_like(db.labels_, dtype=bool)
-core_samples_mask[db.core_sample_indices_] = True
-labels = db.labels_
-
-# Number of clusters in labels, ignoring noise if present.
-n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
-n_noise_ = list(labels).count(-1)
-
-print('Estimated number of clusters: %d' % n_clusters_)
-print('Estimated number of noise points: %d' % n_noise_)
-
-# calculating homogeneity score, silhoutte score, completeness score and measure 
-# score and various other information of the cluster
-h_score= metrics.homogeneity_score(labels_true, labels)
-c_score= metrics.completeness_score(labels_true, labels)
-m_score= metrics.v_measure_score(labels_true, labels)
-adjusted_score= metrics.adjusted_rand_score(labels_true, labels)
-mutual_score= metrics.adjusted_mutual_info_score(labels_true, labels)
-silhouette_coeff= metrics.silhouette_score(X, labels)
-print("Homogeneity: %0.3f" % h_score)
-print("Completeness: %0.3f" % c_score)
-print("V-measure: %0.3f" % m_score)
-print("Adjusted Rand Index: %0.3f" % adjusted_score)
-print("Adjusted Mutual Information: %0.3f" % mutual_score )
-print("Silhouette Coefficient: %0.3f" % silhouette_coeff)
-
-# Plot result
+import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.pyplot import figure
+from pandas import DataFrame
 
-# Black is removed.
-unique_labels = set(labels)
-colors = [plt.cm.Spectral(each)
-          for each in np.linspace(0, 1, len(unique_labels))]
-for k, col in zip(unique_labels, colors):
-    if k == -1:
-        # Black used for noise.
-        col = [0, 0, 0, 1]
+#using sklearn
+from sklearn.cluster import DBSCAN
 
-    class_member_mask = (labels == k)
+x,_= make_blobs(n_samples=500,n_features=2,centers=4,random_state=19)
+clustering= DBSCAN(eps=4 , min_samples=5).fit(x)
+cluster=clustering.labels_
+print(len(set(cluster)))
 
-    xy = X[class_member_mask & core_samples_mask]
-    plt.plot(xy[:, 0], xy[:, 1], 'o', markerfacecolor=tuple(col),
-             markeredgecolor='k', markersize=14)
+def show_cluster(x,cluster):
+    df=DataFrame(dict(x=x[:,0],y=x[:,1],label=cluster))
+    colors={-1:'red',0:'blue',1:'orange',2:'skyblue'}
+    grouped=df.groupby('label')
+    fig,ax=plt.subplots(figsize=(8,8))
+    for key,group in grouped:
+        group.plot(ax=ax,kind='scatter',x='x',y='y',label=key,color=colors[key])
+    plt.show()
 
-    xy = X[class_member_mask & ~core_samples_mask]
-    plt.plot(xy[:, 0], xy[:, 1], 'o', markerfacecolor=tuple(col),
-             markeredgecolor='k', markersize=6)
+show_cluster(x,cluster)
 
-plt.title('Number of clusters estimated are: %d' % n_clusters_)
+#without using sklearn
+eps=4
+minpts=5
+D=x
+
+def update_labels(x,pt,eps,labels,cluster_val):
+    neighbors=[]
+    label_index=[]
+    for i in range (0,x.shape[0]):
+        
+        if np.linalg.norm(x[pt]-x[i])<eps:
+            neighbors.append(x[i])
+            label_index.append(i)
+    if len(neighbors)<minpts:
+        for j in range (len(labels)):
+            if i in label_index:
+                labels[j]=-1
+    else:
+        for j in range (len(labels)):
+            if i in label_index:
+                labels[j]=cluster_val
+    return labels
+
+labels=[0]*len(D)
+c=1
+for p in range(0,D.shape[0]):
+    if labels[p]==0:
+        labels=update_labels(D,p,eps,labels,c)
+        c=c+1
+        
+def plotRes(data, clusterRes, clusterNum):
+    nPoints = len(data)
+    scatterColors = ['black', 'green', 'brown', 'red', 'purple', 'orange', 'yellow']
+    for i in range(clusterNum):
+        if (i==0):
+            #Plot all noise point as blue
+            color='blue'
+        else:
+            color = scatterColors[i % len(scatterColors)]
+        x1 = [];  y1 = []
+        for j in range(nPoints):
+            if clusterRes[j] == i:
+                x1.append(data[j, 0])
+                y1.append(data[j, 1])
+        plt.scatter(x1, y1, c=color, alpha=1, marker='.')
+        
+plotRes(x,labels,c)
 plt.show()
+
