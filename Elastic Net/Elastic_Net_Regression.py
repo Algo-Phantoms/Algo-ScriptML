@@ -59,37 +59,38 @@ class Elastic_Net_Regression() :
         ans=x.dot(self.W)+self.b
         return ans
 
-def main() :
-   df=pd.read_csv("salary_data.csv")
-   x=df.iloc[:,:-1].values
-   y=df.iloc[:,1].values
-   x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=1/3.5,random_state=0)
-   model = Elastic_Net_Regression(iterations=3000,
-                                  learning_rate=0.01,
-                                  l1_penality=500,
-                                  l2_penality=1)
-   model.fit(x_train,y_train)
-   y_pred=model.predict(x_test)
-   print("Predicted values of y:",np.round( y_pred[:3], 2))
-   print("Test values of y:",y_test[:3])
-   print("Trained Weight W:",round(model.W[0],2))
-   print("Trained bias b:",round(model.b,2))
-   plt.subplot(211)
-   plt.title('Salary vs Years of Experience')
-   plt.scatter(x_test,y_test,color='blue',label="Test Y")
-   plt.scatter(x_test,y_pred,color='red',label="Predicted Y")
-   plt.legend(loc=2)
-   plt.subplot(212)
-   plt.scatter(x_test,y_test,color='green',label="Test Y")
-   plt.plot(x_test,y_pred,color='yellow',label="Predicted Y")
-   plt.xlabel('Years of Experience')
-   plt.ylabel('Salary')
-   plt.legend(loc=2)
-   plt.show()
+#UNCOMMENT THE BELOW LINES TO TEST THE ALGORITHM     
+# def main() :
+#    df=pd.read_csv("salary_data.csv")
+#    x=df.iloc[:,:-1].values
+#    y=df.iloc[:,1].values
+#    x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=1/3.5,random_state=0)
+#    model = Elastic_Net_Regression(iterations=3000,
+#                                   learning_rate=0.01,
+#                                   l1_penality=500,
+#                                   l2_penality=1)
+#    model.fit(x_train,y_train)
+#    y_pred=model.predict(x_test)
+#    print("Predicted values of y:",np.round( y_pred[:3], 2))
+#    print("Test values of y:",y_test[:3])
+#    print("Trained Weight W:",round(model.W[0],2))
+#    print("Trained bias b:",round(model.b,2))
+#    plt.subplot(211)
+#    plt.title('Salary vs Years of Experience')
+#    plt.scatter(x_test,y_test,color='blue',label="Test Y")
+#    plt.scatter(x_test,y_pred,color='red',label="Predicted Y")
+#    plt.legend(loc=2)
+#    plt.subplot(212)
+#    plt.scatter(x_test,y_test,color='green',label="Test Y")
+#    plt.plot(x_test,y_pred,color='yellow',label="Predicted Y")
+#    plt.xlabel('Years of Experience')
+#    plt.ylabel('Salary')
+#    plt.legend(loc=2)
+#    plt.show()
 
 
-if __name__ == "__main__" :
-    main()
+# if __name__ == "__main__" :
+#     main()
 
 
 # ### References taken from
