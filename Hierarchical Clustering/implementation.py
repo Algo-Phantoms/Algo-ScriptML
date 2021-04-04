@@ -14,8 +14,7 @@ import pandas_profiling as pp
 import warnings
 warnings.filterwarnings('ignore')
 %matplotlib inline
-
-pp.ProfileReport(dataset, title = 'Pandas Profiling report of "dataset"', html = {'style':{'full_width': True}})
+pp.ProfileReport(dataset, title = 'Pandas Profiling report of "dataset")
 
 
 ## Using the dendrogram to find the optimal number of clusters
