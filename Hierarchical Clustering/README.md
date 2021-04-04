@@ -11,14 +11,23 @@ The results of hierarchical clustering can be shown using dendrogram.
 2. Select the largest vertical distance.
 3. Cross the line over it and you'll get the optimal number of clusters (just like shown in the image).
 
-Note: It's easy to find the optimal no of clusters in K-Means because of elbow method. (we can't find the optimal no of clusters accuratley by using dendogram for large number of data. hence, for large number of data Hierarchical clustering is not good)
 
-## Difference between K Means and Hierarchical clustering
+## Advantages
 
-1. Hierarchical clustering can’t handle big data well but K Means clustering can. This is because the time complexity of K Means is linear i.e. O(n) while that of hierarchical clustering is quadratic i.e. O(n2).
-2. In K Means clustering, since we start with random choice of clusters, the results produced by running the algorithm multiple times might differ. While results are reproducible in Hierarchical clustering.
-3. K Means is found to work well when the shape of the clusters is hyper spherical (like circle in 2D, sphere in 3D).
-4. K Means clustering requires prior knowledge of K i.e. no. of clusters you want to divide your data into. But, you can stop at whatever number of clusters you find appropriate in hierarchical clustering by interpreting the dendrogram
+1) No apriori information about the number of clusters required.
+2) Easy to implement and gives best result in some cases.
+
+## Disadvantages
+
+1) Algorithm can never undo what was done previously.
+2) Time complexity of at least O(n2 log n) is required, where ‘n’ is the number of data points.
+3) Based on the type of distance matrix chosen for merging different algorithms can suffer with one or more of the following:
+    i) Sensitivity to noise and outliers
+    ii) Breaking large clusters
+    iii) Difficulty handling different sized clusters and convex shapes
+4) No objective function is directly minimized
+5) Sometimes it is difficult to identify the correct number of clusters by the dendogram.
+
 
 ## Reference
 • https://www.analyticsvidhya.com/blog/2016/11/an-introduction-to-clustering-and-different-methods-of-clustering/
