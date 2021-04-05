@@ -5,6 +5,7 @@ import pandas as pd
 # The dataset is from a kaggle competition https://www.kaggle.com/c/titanic The main aim is to find whether a
 # passenger of a certain sort is most likely to survive based on features like name, age, gender, socio-economic
 # classes, etc)
+#class SVM is implementing Support Vector Machine from Scratch
 class SVM:
 
     def __init__(self, alpha=0.001, lambda1=0.01, epochs=1000):
@@ -35,7 +36,7 @@ class SVM:
                 predict_[i] = 0
         return np.sign(predict_)
 
-
+#Helps in calculating model accuracy
 def model_accuracy(y_test, pred):
     global acc
     sum = 0
@@ -56,7 +57,7 @@ def initialization():
     y_test = y_test[['Survived']].copy()
     y_test = y_test.values
 
-    print(X_train.isnull().values.any())
+    print(X_train.isnull().values.any()) #checking null values and replacing them with mean values
 
     mean_X_train = X_train['Age'].mean()
     mean_X_test = X_test['Age'].mean()
@@ -77,10 +78,10 @@ def initialization():
 
     print("Replacing fare null values with average")
 
-    sex_dummies = pd.get_dummies(X_train['Sex'])
+    sex_dummies = pd.get_dummies(X_train['Sex']) #Convert categorical variable(sex) into dummy/indicator variables.
     sex_dummies.columns = ['gender', 'sex1']
 
-    X_train['Alone'] = X_train.Parch + X_train.SibSp
+    X_train['Alone'] = X_train.Parch + X_train.SibSp #Extracting data from two coloumns into a single coloumn
     X_train['Alone'].loc[X_train['Alone'] > 0] = 'With Family'
     X_train['Alone'].loc[X_train['Alone'] == 0] = 'Without Family'
 
@@ -88,7 +89,7 @@ def initialization():
     X_test['Alone'].loc[X_test['Alone'] > 0] = 'With Family'
     X_test['Alone'].loc[X_test['Alone'] == 0] = 'Without Family'
 
-    X_train = X_train.drop(['Ticket'], axis=1)
+    X_train = X_train.drop(['Ticket'], axis=1) #Since Ticket doesnt have much influence on prediction dropping it
     X_test = X_test.drop(['Ticket'], axis=1)
 
     print("Number of people embarking in Southampton (S):")
@@ -103,13 +104,13 @@ def initialization():
     queenstown = X_train[X_train["Embarked"] == "Q"].shape[0]
     print(queenstown)
 
-    X_train = X_train.fillna({"Embarked": "S"})
+    X_train = X_train.fillna({"Embarked": "S"}) #Since majority of people travel to Southampton so replacing null values with this
 
     X_test = X_test.fillna({"Embarked": "S"})
 
     print("Replacing Embarked null values with Southampton as most people travel there")
 
-    Alone_mapping = {"With Family": 0, "Without Family": 1}
+    Alone_mapping = {"With Family": 0, "Without Family": 1} #Mapping categorical variable into indicated variables.
     X_train['Alone'] = X_train['Alone'].map(Alone_mapping)
 
     sex_mapping = {"male": 0, "female": 1}
@@ -131,7 +132,7 @@ def initialization():
     titanic_survived_train = X_train.Survived
     titanic_test = X_test[['Pclass', 'Age', 'Embarked', 'Alone', 'Sex', 'Fare']]
 
-    X_training = titanic_train.copy()
+    X_training = titanic_train.copy() #Converting to numpy array for SVM operation
     X_training = X_training.to_numpy()
 
     y_training = titanic_survived_train.copy()
@@ -143,13 +144,14 @@ def initialization():
     return X_training, y_training, X_testing, y_test
 
 
-if __name__ == "__main__":
-    X_training, y_training, X_testing, y_test = initialization()
-    model = SVM()
-    model.fit(X_training, y_training)
-    prediction = model.predict(X_testing)
-    for i in range(len(prediction)):
-        if prediction[i] == -1:
-            prediction[i] = 0
 
-    print(model_accuracy(y_test, prediction))
+X_training, y_training, X_testing, y_test = initialization()
+model = SVM()
+model.fit(X_training, y_training)
+prediction = model.predict(X_testing)
+for i in range(len(prediction)):
+    if prediction[i] == -1:
+        prediction[i] = 0
+
+print("Accuracy of model")    
+print(model_accuracy(y_test, prediction))
