@@ -48,7 +48,7 @@ def model_accuracy(y_test, pred):
     return acc
 
 
-def initialization():
+"""def initialization():
     #initializing data and performing eda to consider only useful features
     X_train = pd.read_csv('train.csv')
     X_test = pd.read_csv('test.csv')
@@ -154,4 +154,5 @@ for i in range(len(prediction)):
         prediction[i] = 0
 
 print("Accuracy of model")    
-print(model_accuracy(y_test, prediction))
+print(model_accuracy(y_test, prediction))"""
+
