@@ -23,3 +23,4 @@ Boosting is an ensemble modeling technique which attempts to build a strong clas
 
 **Step 4:** Reiterate from Step 2 until all the data points have been correctly classified, or the maximum iteration level has been reached.
 ![Image1](https://lh3.googleusercontent.com/kpQjxgGIxnSnMm495bDs0OZf4rE08E58PV1wwK9q10b_pL5AtKkRcY0OY5Hc_NFY0aW6iRQYAQDKuueEwnOfcEz9_IYyO-Ej-HwAqoFS_rQ779mP5HTHPKCy4x-lBmr33dd-Nw)
+**Fully grown decision tree (left) vs three decision stumps (right)**
