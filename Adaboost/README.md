@@ -14,16 +14,12 @@ AdaBoost algorithm falls under ensemble boosting techniques, as discussed it com
 ## What is Boosting?
 Boosting is an ensemble modeling technique which attempts to build a strong classifier from the number of weak classifiers. It is done building a model by using weak models in series. Firstly, a model is built from the training data. Then the second model is built which tries to correct the errors present in the first model. This procedure is continued and models are added until either the complete training data set is predicted correctly or the maximum number of models are added.
 
-## Steps involved in Adaboost Algorithm
-<ol type="1">
-  <li> Initialise the dataset and assign equal weight to each of the data point. </li>
-  <li> Provide this as input to the model and identify the wrongly classified data points.
-  <li> Increase the weight of the wrongly classified data points.
-    . </li>
-  <li> if (got required results)
-      Goto step 5
-    else
-      Goto step 2 </li>
-  <li> End </li>
-</ol>
+## Working of Adaboost Algorithm
+**Step 1:** A weak classifier (e.g. a decision stump) is made on top of the training data based on the weighted samples. Here, the weights of each sample indicate how important it is to be correctly classified. Initially, for the first stump, we give all the samples equal weights.
 
+**Step 2:** We create a decision stump for each variable and see how well each stump classifies samples to their target classes. For example, in the diagram below we check for Age, Eating Junk Food, and Exercise. We'd look at how many samples are correctly or incorrectly classified as Fit or Unfit for each individual stump.
+
+**Step 3:** More weight is assigned to the incorrectly classified samples so that they're classified correctly in the next decision stump. Weight is also assigned to each classifier based on the accuracy of the classifier, which means high accuracy = high weight!
+
+**Step 4:** Reiterate from Step 2 until all the data points have been correctly classified, or the maximum iteration level has been reached.
+[!image1](https://lh3.googleusercontent.com/kpQjxgGIxnSnMm495bDs0OZf4rE08E58PV1wwK9q10b_pL5AtKkRcY0OY5Hc_NFY0aW6iRQYAQDKuueEwnOfcEz9_IYyO-Ej-HwAqoFS_rQ779mP5HTHPKCy4x-lBmr33dd-Nw)
