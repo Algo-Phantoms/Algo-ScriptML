@@ -35,3 +35,23 @@ In this case,
 - n is the dimension of real numbers, or the number of attributes in our dataset
 - x is the set of data points
 - y is the target variable which is either -1 or 1 as it is a binary classification problem, denoting the first or the second class (e.g. Fit vs Not Fit)
+
+We calculate the weighted samples for each data point. AdaBoost assigns weight to each training example to determine its significance in the training dataset. When the assigned weights are high, that set of training data points are likely to have a larger say in the training set. Similarly, when the assigned weights are low, they have a minimal influence in the training dataset.
+
+Initially, all the data points will have the same weighted sample w:
+![Image4](https://blog.paperspace.com/content/images/2019/11/image-51.png)
+where N is the total number of data points.
+
+The weighted samples always sum to 1, so the value of each individual weight will always lie between 0 and 1. After this, we calculate the actual influence for this classifier in classifying the data points using the formula:
+![Image5](https://blog.paperspace.com/content/images/2019/11/image-52.png)
+
+Alpha is how much influence this stump will have in the final classification. Total Error is nothing but the total number of misclassifications for that training set divided by the training set size. We can plot a graph for Alpha by plugging in various values of Total Error ranging from 0 to 1.
+![Image6](https://www.notion.so/image/http%3A%2F%2Fchrisjmccormick.files.wordpress.com%2F2013%2F12%2Fadaboost_alphacurve.png?table=block&id=9c43a3a4-8318-4035-852a-52628778c4e3&width=2560&cache=v2)
+
+After plugging in the actual values of Total Error for each stump, it's time for us to update the sample weights which we had initially taken as 1/N for every data point. We'll do this using the following formula:
+![Image7](https://blog.paperspace.com/content/images/2019/11/image-53.png)
+
+The two cases for alpha (positive or negative) indicate:
+
+- Alpha is positive when the predicted and the actual output agree (the sample was classified correctly). In this case we decrease the sample weight from what it was before, since we're already performing well.
+- Alpha is negative when the predicted output does not agree with the actual class (i.e. the sample is misclassified). In this case we need to increase the sample weight so that the same misclassification does not repeat in the next stump. This is how the stumps are dependent on their predecessors.
