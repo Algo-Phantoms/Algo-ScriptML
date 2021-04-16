@@ -22,4 +22,4 @@ Boosting is an ensemble modeling technique which attempts to build a strong clas
 **Step 3:** More weight is assigned to the incorrectly classified samples so that they're classified correctly in the next decision stump. Weight is also assigned to each classifier based on the accuracy of the classifier, which means high accuracy = high weight!
 
 **Step 4:** Reiterate from Step 2 until all the data points have been correctly classified, or the maximum iteration level has been reached.
-[!image1](https://lh3.googleusercontent.com/kpQjxgGIxnSnMm495bDs0OZf4rE08E58PV1wwK9q10b_pL5AtKkRcY0OY5Hc_NFY0aW6iRQYAQDKuueEwnOfcEz9_IYyO-Ej-HwAqoFS_rQ779mP5HTHPKCy4x-lBmr33dd-Nw)
+![Image1](https://lh3.googleusercontent.com/kpQjxgGIxnSnMm495bDs0OZf4rE08E58PV1wwK9q10b_pL5AtKkRcY0OY5Hc_NFY0aW6iRQYAQDKuueEwnOfcEz9_IYyO-Ej-HwAqoFS_rQ779mP5HTHPKCy4x-lBmr33dd-Nw)
