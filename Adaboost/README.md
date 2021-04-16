@@ -27,3 +27,11 @@ Boosting is an ensemble modeling technique which attempts to build a strong clas
 ![Image1](https://lh3.googleusercontent.com/kpQjxgGIxnSnMm495bDs0OZf4rE08E58PV1wwK9q10b_pL5AtKkRcY0OY5Hc_NFY0aW6iRQYAQDKuueEwnOfcEz9_IYyO-Ej-HwAqoFS_rQ779mP5HTHPKCy4x-lBmr33dd-Nw)
 
 ![Image2](https://blog.paperspace.com/content/images/2019/12/WhatsApp-Image-2019-12-30-at-11.55.02-AM.jpeg)
+
+## Adaboost Equation
+Consider a dataset with N points, or rows, in our dataset.
+![Image3](https://blog.paperspace.com/content/images/2019/11/image-50.png)
+In this case,
+- n is the dimension of real numbers, or the number of attributes in our dataset
+- x is the set of data points
+- y is the target variable which is either -1 or 1 as it is a binary classification problem, denoting the first or the second class (e.g. Fit vs Not Fit)
