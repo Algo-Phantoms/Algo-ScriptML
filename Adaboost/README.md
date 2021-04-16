@@ -55,3 +55,26 @@ The two cases for alpha (positive or negative) indicate:
 
 - Alpha is positive when the predicted and the actual output agree (the sample was classified correctly). In this case we decrease the sample weight from what it was before, since we're already performing well.
 - Alpha is negative when the predicted output does not agree with the actual class (i.e. the sample is misclassified). In this case we need to increase the sample weight so that the same misclassification does not repeat in the next stump. This is how the stumps are dependent on their predecessors.
+
+## Advantages
+- This Algorithm combine multiple low accuracy models to create a high accuracy model.
+- Low generalization error.
+- Easy to implement.
+- Works with a wide range of classifiers, no parameters to adjust.
+
+## Disadvantages
+- It is from empirical evidence and particularly vulnerable to uniform noise.
+- Weak classifiers being too weak can lead to low margins and overfitting.
+
+## Applications
+- To solve a variety of real-world problems, such as predicting customer churn and classifying the types of topics customers are talking/calling about.
+- The algorithm is heavily utilised for solving classification problems, given its relative ease of implementation in languages such as R and Python.
+
+## Conclusion
+This is the basic idea of Adaboost Algorithm in Machine Learning.
+
+## References
+- https://www.geeksforgeeks.org/implementing-the-adaboost-algorithm-from-scratch/
+- https://blog.paperspace.com/adaboost-optimizer/
+- https://www.geeksforgeeks.org/boosting-in-machine-learning-boosting-and-adaboost/#:~:text=AdaBoost%20is%20short%20for%20Adaptive,Yoav%20Freund%20and%20Robert%20Schapire.
+- https://www.marktechpost.com/2019/01/31/introduction-to-boosting-machine-learning-algorithm-adaboost/#:~:text=AdaBoost%20algorithm&text=Boosting%20algorithms%20combine%20multiple%20low,classifiers%2C%20no%20parameters%20to%20adjust.
