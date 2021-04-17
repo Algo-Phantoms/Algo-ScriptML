@@ -51,7 +51,7 @@ plt.plot(epoch_list,cost_list)
 
 #Prediction function
 def predict(total_square_feet,baths,w,b):
-    scaled_X=sx.transform([[area,bedrooms]])[0]
+    scaled_X=sx.transform([[total_square_feet,baths]])[0]
     scaled_price=w[0]*scaled_X[0]+w[1]*scaled_X[1]+b
     pass
     return sy.inverse_transform([scaled_price])[0][0]
