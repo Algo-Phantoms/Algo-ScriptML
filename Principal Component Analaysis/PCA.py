@@ -11,7 +11,7 @@ class PCA:
     def __init__(self, array):
         self.arr = array
 
-    def calcualte(self):
+    def calculate(self):
         self.arr = np.array(self.arr)
         # Calculate mean
         arr_mean = np.mean(self.arr.T, axis = 1)
@@ -37,7 +37,7 @@ arr = [
 
 pca = PCA(arr)
 print('Principal Component Analysis of the given array\n')
-print(pca.calcualte())
+print(pca.calculate())
 
 """
 
