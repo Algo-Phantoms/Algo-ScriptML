@@ -197,6 +197,6 @@ _More about log-likelihood [here](https://en.wikipedia.org/wiki/Likelihood_funct
 
 1. [Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/)
 
-2. [Scikit Learn](hhttp://scikit-learn.org/stable/modules/mixture.html#:~:text=A%20Gaussian%20mixture%20model%20is,Gaussian%20distributions%20with%20unknown%20parameters.)
+2. [Scikit Learn](https://scikit-learn.org/stable/modules/mixture.html#:~:text=A%20Gaussian%20mixture%20model%20is,Gaussian%20distributions%20with%20unknown%20parameters.)
 
 3. [Wikipedia](https://en.wikipedia.org/wiki/Mixture_model)
