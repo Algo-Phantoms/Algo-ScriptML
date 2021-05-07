@@ -1,0 +1,63 @@
+#code for batch gradient descent
+#in this code snippet,I am have made an attempt to explain batch gradient descent,a vey useful optimization technique
+#We first import our baisc necessary librarires required for scientific learning.
+import pandas as pd
+import numpy as np
+from matplotlib import pyplot as plt
+
+
+
+
+#Downloading sample dataset to perform the algorithm
+df=pd.read_csv("banguluru-homeprice2.csv")
+df.sample(5)
+#Next step is to scale  the dataset.Scaling improves the efficiency of the gradient descent
+from  sklearn import preprocessing
+sx=preprocessing.MinMaxScaler()
+sy=preprocessing.MinMaxScaler()
+
+scaled_X=sx.fit_transform(df.drop('price',axis='columns'))
+scaled_Y=sy.fit_transform(df['price'].values.reshape(df.shape[0],1))
+#Batch-gradient descent.
+##Batch gradient descent improves the efficiency of the system.
+def batch_gradient_descent(x,y_true,epochs,learning_rate=0.01):
+    number_of_features=x.shape[1]
+    w=np.ones(shape=(number_of_features))#intializing the weight vectors to a zero matrix
+    b=0#intializing the bias term to be zero.
+    total_samples=x.shape[0]
+    cost_list=[]
+    epoch_list=[]
+    for i in range(epochs):
+        y_predicted=np.dot(w,scaled_X.T)+b
+
+        w_grad=-(2/total_samples)*(x.T.dot(y_true-y_predicted))
+        b_grad=-(2/total_samples)*np.sum(y_true-y_predicted)
+
+        w=w-learning_rate*w_grad
+        b=b-learning_rate*b_grad
+
+        cost=np.mean(np.square(y_true-y_predicted))
+        if i%10==0:
+            cost_list.append(cost)
+            epoch_list.append(i)
+        return w,b,cost,cost_list,epoch_list
+
+w,b,cost,cost_list,epoch_list=batch_gradient_descent(scaled_X,scaled_Y.reshape(scaled_Y.shape[0]),500)
+#plotting the graph of epoch vs cost(epoch implies the no of times we will go through the dataset)
+#cost function is approximately equal to the loss function we have to plot for finding a fit for the model by optimising the value of weights.
+plt.xlabel("epoch")
+plt.ylabel("cost")
+plt.plot(epoch_list,cost_list)
+
+#Prediction function
+def predict(total_square_feet,baths,w,b):
+    scaled_X=sx.transform([[area,bedrooms]])[0]
+    scaled_price=w[0]*scaled_X[0]+w[1]*scaled_X[1]+b
+    pass
+    return sy.inverse_transform([scaled_price])[0][0]
+
+
+
+
+
+
