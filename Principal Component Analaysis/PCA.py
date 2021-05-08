@@ -3,7 +3,7 @@ import numpy as np
 class PCA:
     """
     PCA: mathematical technique used for dimensionality reduction
-    Attrubutes:
+    Attributes:
     
     array (list): A matrix of elements
     """
