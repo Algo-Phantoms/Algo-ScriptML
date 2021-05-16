@@ -10,6 +10,11 @@ minPts - Minimum points to be present in a points neighbourhood.
 
 ![image](https://user-images.githubusercontent.com/67017422/113477225-06842800-949e-11eb-9285-9c2490b5dff9.png)
 
+## Advantages of using DBSCAN algorithm over other clustering algorithm:-
+
+1. Unlike K-means we don't need to provide the model with number of cluster in prior, which was a challenge in K-means. In DBSCAN we just have to provide with the distance theat is considered "close" for creating a cluster.
+2. K-Means clustering may bring together unrelated observations. Even if the results are spaced far apart in the vector space, they ultimately become a part of a cluster. Since clusters are formed by the mean value of cluster components, each data point contributes to the formation of clusters. A small shift in data points may have an effect on the clustering result. Because of the way clusters are created in DBSCAN, this issue is greatly reduced. Unless we come across some strange shape info, this is typically not a major issue.
+
 ## Classification of points:-
 
 1. Core points- A point is a core point if it is surrounded by at least minPts number of points with radius eps (including the point itself).Hence a point is core point only when no. of neighbours >= minPts.
@@ -35,3 +40,5 @@ If both x and y are core points and a path formed by density edges connects poin
 3. Assign cluster to a core point.
 4. Color all the density connected points of a core points.
 5. Color boundary points according tot the nearest core point.
+
+For further knowledge, you may also refer to https://www.youtube.com/watch?v=Q7iWANbkFxk
