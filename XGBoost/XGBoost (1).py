@@ -1,30 +1,21 @@
-# XGBoost 
+# XGBoost
 
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import IPython
-from IPython import get_ipython
 
-
-# Consider the following data.
+# Self defined Class for XGBoost
 class XGB:
-    def __init__(self):
-        age = [9, 23, 24, 27, 45, 56, 62, 71, 76, 82, 84, 95, 79, 29, 34, 35, 49]
-        fees = [69,78, 83, 82, 113, 119, 137, 145, 147, 158, 204, 189, 99, 100, 118, 112, 117]
+    def __init__(self, X, Y):
         self.df = pd.DataFrame(columns=['age', 'fees'])
-        self.df.age = year
-        self.df.fees =fees 
+        self.df.age = X
+        self.df.fees = Y
         print("DATA GIVEN :")
         print(self.df.head())
 
-    def plot_data(self):
-        plt.scatter(x=self.df.age, y=self.df.fees)
-        plt.show()
-
-
-
-
+    # for plotting the data before training:
+    # def plot_data(self):
+    #     plt.scatter(x=self.df.age, y=self.df.fees)
+    #     plt.show()
 
     def perform_boosting(self):
         df1 = self.df
@@ -50,9 +41,9 @@ class XGB:
         print(self.df.head())
 
 
-#ffter 2 iterations
+# ffter 2 iterations
 
-#continue to iterate for 100 times , You will see the Loss of MSE(Fi) constantly reducing by a huge margin
+# continue to iterate for 100 times , You will see the Loss of MSE(Fi) constantly reducing by a huge margin
 
         for i in range(100):
             f = self.df.fees.mean()
@@ -75,22 +66,25 @@ class XGB:
         print(self.df.head())
 
 
-#graph for Iteration number 1 , 10 and 99
+# graph for Iteration number 1 , 10 and 99
 # the loss keeps on decreasing and the model adapting to the dataset as the iteration tend to increase
 
+# Here is the code for plotting the loss:
 
-    def plot_loss(self):
-        plt.figure(figsize=(15, 10))
-        plt.scatter(self.df.age, self.df.fees)
-        plt.plot(self.df.age, self.df.f1, label='f1')
-        plt.plot(self.df.age, self.df.f10, label='f10')
-        plt.plot(self.df.age, self.df.f99, label='f99')
-        plt.legend()
-        plt.show()
+    # def plot_loss(self):
+    #     plt.figure(figsize=(15, 10))
+    #     plt.scatter(self.df.age, self.df.fees)
+    #     plt.plot(self.df.age, self.df.f1, label='f1')
+    #     plt.plot(self.df.age, self.df.f10, label='f10')
+    #     plt.plot(self.df.age, self.df.f99, label='f99')
+    #     plt.legend()
+    #     plt.show()
 
 
 if __name__ == "__main__":
-    my_xgb = XGB()
-    my_xgb.plot_data()
+
+    age = [9, 23, 24, 27, 45, 56, 62, 71, 76, 82, 84, 95, 79, 29, 34, 35, 49]
+    fees = [69, 78, 83, 82, 113, 119, 137, 145,
+            147, 158, 204, 189, 99, 100, 118, 112, 117]
+    my_xgb = XGB(age, fees)
     my_xgb.perform_boosting()
-    my_xgb.plot_loss()
