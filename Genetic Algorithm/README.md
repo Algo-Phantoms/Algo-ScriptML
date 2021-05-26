@@ -47,3 +47,13 @@ Like any technique, GAs also suffer from a few limitations. These include −
 -   Fitness value is calculated repeatedly which might be computationally expensive for some problems.    
 -   Being stochastic, there are no guarantees on the optimality or the quality of the solution.  
 -   If not implemented properly, the GA may not converge to the optimal solution.
+
+## References :
+
+https://www.sciencedirect.com/topics/engineering/genetic-algorithm
+
+https://www.analyticsvidhya.com/blog/2017/07/introduction-to-genetic-algorithm/
+
+https://www.tutorialspoint.com/genetic_algorithms/genetic_algorithms_introduction.htm#:~:text=Genetic%20Algorithm%20(GA)%20is%20a,take%20a%20lifetime%20to%20solve.
+
+https://www.geeksforgeeks.org/genetic-algorithms/
