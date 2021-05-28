@@ -70,12 +70,13 @@ This project follows the [MIT License](https://choosealicense.com/licenses/mit/)
 <table>
   <tbody><tr>
     <td align="center"><a href="https://github.com/geekquad"><img alt="" src="https://avatars.githubusercontent.com/geekquad" width="100px;"><br><sub><b>Aditya Kumar Gupta</b></sub></a><br><a href="https://github.com/geekquad/AlgoBook/commits?author=geekquad" title="Code">💻 🖋</a></td> </a></td>
-     
- <td align="center"><a href="https://github.com/MAJOR-BEAST"><img alt="" src="https://avatars.githubusercontent.com/MAJOR-BEAST" width="100px;"><br><sub><b> Paurush Tiwari </b></sub></a><br><a href="https://github.com/Algo-Phantoms/Algo-Tree/commits?author=MAJOR-BEAST" title="Code">💻 </a></td></a></td>
- 
-  <td align="center"><a href="https://github.com/kritikaparmar-programmer"><img alt="" src="https://avatars.githubusercontent.com/kritikaparmar-programmer" width="100px;"><br><sub><b>Kritika Parmar</b></sub></a><br><a href="https://github.com/geekquad/AlgoBook/commits?author=kritikaparmar-programmer" title="Code">💻 </a></td></a></td>
-  
+    
   <td align="center"><a href="https://github.com/ashwani-rathee"><img alt="" src="https://avatars.githubusercontent.com/ashwani-rathee" width="100px;"><br><sub><b>Ashwani Rathee</b></sub></a><br><a href="https://github.com/geekquad/AlgoBook/commits?author=ashwani-rathee" title="Code">💻 </a></td></a></td>
+  
+  <td align="center"><a href="https://github.com/yukti845"><img alt="" src="https://avatars.githubusercontent.com/yukti845" width="100px;"><br><sub><b>Yukti Sachdeva
+</b></sub></a><br><a href="https://github.com/geekquad/AlgoBook/commits?author=yukti845" title="Code">💻 </a></td></a></td>
+  
+  
   </tr>
 </tbody></table>
 
