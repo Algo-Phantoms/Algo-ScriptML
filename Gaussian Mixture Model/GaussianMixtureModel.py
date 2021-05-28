@@ -1,12 +1,6 @@
-import matplotlib.pyplot as plt
 import numpy as np
-from sklearn import datasets
 from sklearn.cluster import KMeans
 
-#Here we're gonna use Iris Dataset which you probably are familiar with.
-
-iris = datasets.load_iris()
-X = iris.data
 
 class GaussianDistribution:
 
@@ -128,15 +122,3 @@ class GaussianDistribution:
             
         return likelihoods
 
-
-n_clusters = 3
-n_epochs = 50
-model = GaussianDistribution(n_clusters, n_epochs)
-
-likelihoods = model.train_gmm(X)
-
-# visualizing the progress of log-likelihodd function
-plt.figure(figsize=(10, 10))
-plt.title('Log-Likelihood')
-plt.plot(np.arange(1, n_epochs + 1), likelihoods)
-plt.show()
