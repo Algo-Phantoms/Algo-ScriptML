@@ -41,15 +41,15 @@ The goal of this project is not to create algorithms that are as streamlined and
 **Please go through the whole Contributing Guidelines [here](https://github.com/Algo-Phantoms/Algo-ScriptML/blob/main/Contributing_Guidelines.md).**
 
 * Make sure you do not copy codes from external sources because that work will not be considered. Plagiarism is strictly not allowed.
-* You can only work on issues that you have been assigned to you.
-* If you want to contribute for an existing algorithm, we prefer that you create an issue before making a PR and link your PR to that issue.
+* You can only work on issues that have been assigned to you.
+* If you want to contribute to an existing algorithm, we prefer that you create an issue before making a PR and link your PR to that issue.
 * If you have modified/added code work, make sure the code compiles before submitting.
-* Strictly use snake_case (underscore_separated) in your file_name and push it in correct folder.
+* Strictly use snake_case (underscore_separated) in your file_name and push it incorrect folder.
 * Do not update the **[README.md](https://github.com/Algo-Phantoms/Algo-ScriptML/blob/main/README.md).**
 
 ## 📂 Where to upload the files 
 
-* Your files should be uploaded inside the *code folder into the corresponding language folder (For instance, if you wrote code for an K-Means Implementation, it goes inside the K-Means folder).
+* Your files should be uploaded inside the *code folder into the corresponding language folder (For instance, if you wrote code for a K-Means Implementation, it goes inside the K-Means folder).
 * **Under no circumstances create new folders within the language folders to upload your code unless specifically told to do so.**
 * Edit the corresponding README.md file to add the link to your code in the corresponding section ([GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/))
 
@@ -70,12 +70,13 @@ This project follows the [MIT License](https://choosealicense.com/licenses/mit/)
 <table>
   <tbody><tr>
     <td align="center"><a href="https://github.com/geekquad"><img alt="" src="https://avatars.githubusercontent.com/geekquad" width="100px;"><br><sub><b>Aditya Kumar Gupta</b></sub></a><br><a href="https://github.com/geekquad/AlgoBook/commits?author=geekquad" title="Code">💻 🖋</a></td> </a></td>
-     
- <td align="center"><a href="https://github.com/MAJOR-BEAST"><img alt="" src="https://avatars.githubusercontent.com/MAJOR-BEAST" width="100px;"><br><sub><b> Paurush Tiwari </b></sub></a><br><a href="https://github.com/Algo-Phantoms/Algo-Tree/commits?author=MAJOR-BEAST" title="Code">💻 </a></td></a></td>
- 
-  <td align="center"><a href="https://github.com/kritikaparmar-programmer"><img alt="" src="https://avatars.githubusercontent.com/kritikaparmar-programmer" width="100px;"><br><sub><b>Kritika Parmar</b></sub></a><br><a href="https://github.com/geekquad/AlgoBook/commits?author=kritikaparmar-programmer" title="Code">💻 </a></td></a></td>
-  
+    
   <td align="center"><a href="https://github.com/ashwani-rathee"><img alt="" src="https://avatars.githubusercontent.com/ashwani-rathee" width="100px;"><br><sub><b>Ashwani Rathee</b></sub></a><br><a href="https://github.com/geekquad/AlgoBook/commits?author=ashwani-rathee" title="Code">💻 </a></td></a></td>
+  
+  <td align="center"><a href="https://github.com/yukti845"><img alt="" src="https://avatars.githubusercontent.com/yukti845" width="100px;"><br><sub><b>Yukti Sachdeva
+</b></sub></a><br><a href="https://github.com/geekquad/AlgoBook/commits?author=yukti845" title="Code">💻 </a></td></a></td>
+  
+  
   </tr>
 </tbody></table>
 
