@@ -64,4 +64,57 @@ class LinearRegression:
         Returns: 
         array, predictions
         '''
-        return np.dot(X, self.weights) + self.bias
+        return np.dot(X, self.weights) + self.bias()
+    
+'''
+
+EXAMPLE: 
+
+# Importing Libraries
+
+import pandas as pd
+from sklearn import preprocessing 
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+from sklearn.model_selection import train_test_split
+
+
+# Getting our Data
+
+df = pd.read_csv('startups.csv')
+
+
+# Data Preprocessing
+
+# no null values are present
+# but, we need to encode 'State' attribute
+label_encoder = preprocessing.LabelEncoder()  # encoding data
+df['State'] = df['State'].astype('|S')
+df['State'] = label_encoder.fit_transform(df['State'])
+# checking for null values
+df.isnull().any()
+# checking vif
+variables = df[['R&D Spend', 'Administration', 'Marketing Spend', 'State']]
+vif = pd.DataFrame()
+vif['VIF'] = [variance_inflation_factor(variables.values, i) for i in range(variables.shape[1])]
+vif['Features'] = variables.columns
+# as vif for all attributes<10, we need not drop any of them
+
+
+# Splitting Data for Training and Testing
+
+data = df.values
+X,y = data[:,:-1], data[:,-1]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)  # splitting in the ration 80:20
+
+
+# Fitting the Data
+
+model = LinearRegression(learning_rate=0.01, n_iterations=10000)
+model.fit(X_train,y_train)
+
+
+# Making Predictions
+
+y_pred = model.predict(X_test)
+
+'''
