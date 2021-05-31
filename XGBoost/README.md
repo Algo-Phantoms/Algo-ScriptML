@@ -27,6 +27,12 @@ XGBoost is an algorithm that has recently been dominating applied machine learni
 </ol>
 It is important to make the algorithm aware of the sparsity pattern in the data. XGBoost handles all sparsity patterns in a unified way.
 
+## XGBoost objective function:
+The objective function (loss function and regularization) at iteration t that we need to minimize is the following:
+
+![Image2](https://miro.medium.com/max/875/1*cU3rKmPvGZa3gzAZ3tzKnQ.png)
+
+
 ## System Features:
 - Parallelization of tree construction using all of your CPU cores during training. Collecting statistics for each column can be parallelized, giving us a parallel algorithm for split finding.
 - Cache-aware Access: XGBoost has been designed to make optimal use of hardware. This is done by allocating internal buffers in each thread, where the gradient statistics can be stored.
@@ -34,6 +40,38 @@ It is important to make the algorithm aware of the sparsity pattern in the data.
 - Distributed Computing for training very large models using a cluster of machines.
 - Column Block for Parallel Learning. The most time-consuming part of tree learning is to get the data into sorted order. In order to reduce the cost of sorting, the data is stored in the column blocks in sorted order in compressed format.
 
+## Why does XGBoost Performs so well?
+XGBoost and Gradient Boosting Machines (GBMs) are both ensemble tree methods that apply the principle of boosting weak learners (CARTs generally) using the gradient descent architecture. However, XGBoost improves upon the base GBM framework through systems optimization and algorithmic enhancements.
+
+![Image3](https://miro.medium.com/max/1554/1*FLshv-wVDfu-i54OqvZdHg.png)
+
+It is easy to see that the XGBoost objective is a function of functions (i.e. l is a function of CART learners), and as the authors refer in the paper [2] “cannot be optimized using traditional optimization methods in Euclidean space”.
+
 ## Goals of XGBoost:
 - Execution Speed: XGBoost was almost always faster than the other benchmarked implementations from R, Python Spark and H2O and it is really faster when compared to the other algorithms.
 - Model Performance: XGBoost dominates structured or tabular datasets on classification and regression predictive modelling problems.
+
+![Image4](https://miro.medium.com/max/5248/1*1kjLMDQMufaQoS-nNJfg1Q.png)
+
+## Advantages:
+- It is Highly Flexible.
+- It uses the power of parallel processing.
+- It is faster than Gradient Boosting.
+- It supports regularization.
+- It is designed to handle missing data with its in-build features.
+- The user can run a cross-validation after each iteration.
+
+## Disadvantage:
+- The high flexibility results in many parameters that interact and influence heavily the behavior of the approach (number of iterations, tree depth, regularization parameters, etc.). This requires a large grid search during tuning.
+- Less interpretative in nature, although this is easily addressed with various tools.
+- Computationally expensive - often require many trees (>1000) which can be time and memory exhaustive.
+
+## Conclusion:
+XGBoost is a faster algorithm when compared to other algorithms because of its parallel and distributed computing. XGBoost is developed with both deep considerations in terms of systems optimization and principles in machine learning. The goal of this library is to push the extreme of the computation limits of machines to provide a scalable, portable and accurate library.
+
+## References:
+- https://xgboost.readthedocs.io/en/latest/tutorials/model.html
+- https://towardsdatascience.com/https-medium-com-vishalmorde-xgboost-algorithm-long-she-may-rein-edd9f99be63d
+- https://medium.com/sfu-cspmp/xgboost-a-deep-dive-into-boosting-f06c9c41349
+- https://www.mygreatlearning.com/blog/xgboost-algorithm/
+- https://blog.paperspace.com/gradient-boosting-for-classification/
