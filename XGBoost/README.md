@@ -32,8 +32,6 @@ The objective function (loss function and regularization) at iteration t that we
 
 ![Image2](https://miro.medium.com/max/875/1*cU3rKmPvGZa3gzAZ3tzKnQ.png)
 
-It is easy to see that the XGBoost objective is a function of functions (i.e. l is a function of CART learners), and as the authors refer in the paper [2] “cannot be optimized using traditional optimization methods in Euclidean space”.
-
 ## System Features:
 - Parallelization of tree construction using all of your CPU cores during training. Collecting statistics for each column can be parallelized, giving us a parallel algorithm for split finding.
 - Cache-aware Access: XGBoost has been designed to make optimal use of hardware. This is done by allocating internal buffers in each thread, where the gradient statistics can be stored.
