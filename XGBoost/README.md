@@ -32,6 +32,7 @@ The objective function (loss function and regularization) at iteration t that we
 
 ![Image2](https://miro.medium.com/max/875/1*cU3rKmPvGZa3gzAZ3tzKnQ.png)
 
+It is easy to see that the XGBoost objective is a function of functions (i.e. l is a function of CART learners), and as the authors refer in the paper [2] “cannot be optimized using traditional optimization methods in Euclidean space”.
 
 ## System Features:
 - Parallelization of tree construction using all of your CPU cores during training. Collecting statistics for each column can be parallelized, giving us a parallel algorithm for split finding.
@@ -44,8 +45,6 @@ The objective function (loss function and regularization) at iteration t that we
 XGBoost and Gradient Boosting Machines (GBMs) are both ensemble tree methods that apply the principle of boosting weak learners (CARTs generally) using the gradient descent architecture. However, XGBoost improves upon the base GBM framework through systems optimization and algorithmic enhancements.
 
 ![Image3](https://miro.medium.com/max/1554/1*FLshv-wVDfu-i54OqvZdHg.png)
-
-It is easy to see that the XGBoost objective is a function of functions (i.e. l is a function of CART learners), and as the authors refer in the paper [2] “cannot be optimized using traditional optimization methods in Euclidean space”.
 
 ## Goals of XGBoost:
 - Execution Speed: XGBoost was almost always faster than the other benchmarked implementations from R, Python Spark and H2O and it is really faster when compared to the other algorithms.
