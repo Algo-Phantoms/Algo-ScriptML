@@ -1,3 +1,4 @@
+
 # Markov's Chain
 ## What is Markov's Chain
 _**A stochastic process containing random variables, transitioning from one state to another depending on certain assumptions and definite probabilistic rules.**_
@@ -67,6 +68,7 @@ Here’s a list of real-world applications of Markov chains:
 4.  **Text generator:** Markov chains are most commonly used to generate dummy texts or produce large essays and compile speeches. It is also used in the name generators that you see on the web.
 
 ### Resources :
+
 https://www.edureka.co/community/54020/markov-chain-using-processing-python
 https://www.youtube.com/watch?v=Gs2xtNzogSY&t=397s
 https://medium.com/sigmoid/rl-markov-chains-dbf2f37e8b69
